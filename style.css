@@ -103,3 +103,10 @@ button:hover {
   background-color: var(--bg-button-hover);
   cursor: pointer;
 }
+
+@media (max-width:1095px){
+    .nav ul{
+        display: none;
+    }
+    
+}
