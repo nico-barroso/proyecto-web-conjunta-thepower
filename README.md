@@ -71,4 +71,8 @@ No teneis que seguir esta receta, solo que tengais la vuestra propia y que la re
 
 **Esto son recomendaciones y no hace falta que seais super estrictos y seguirlas a rajatabla** que estamos para aprender. Pero cuanto más tiempo nos esforcemos en escribir mejor código, más legible y escalable mejor para nuestra carrera y para nuestra salud mental.
 
+
+Nota: recordad que la aplicación está desplegada en Vercel para que la podais consultar cuando querais. Este es el enlace que además encontrareis en el sidebar de la derecha de la repo, debajo del About.
+https://colaboracion-web.vercel.app/
+
 ¡Manos a la obra!
