@@ -89,6 +89,13 @@ button {
   box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
 }
 
+button a{
+    text-decoration: none;
+    color: var(--color-text-button);
+}
+button a:hover{
+    color: var(--color-text-button);
+}
 button span {
   color: var(--color-icon-button);
 }
