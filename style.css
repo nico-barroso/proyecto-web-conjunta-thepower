@@ -110,3 +110,12 @@ button:hover {
     }
     
 }
+
+@media (max-width:532px){
+    .button{
+        display: none;
+    }
+    .logo{
+        margin: auto;
+    }
+}
