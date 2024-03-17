@@ -34,7 +34,8 @@ nav .container li{
     /*de esta manera se ve que estas atacando a un li que está dentro de un container en el nav*/
 }
 
-/*Si luego vas a seguir atacando solo los elementos de ese container no hace falta volver a poner el nav si el nombre de la clase no se repite, en el caso de que se repita, añadir otra vez nav*/
+/*Si luego vas a seguir atacando solo los elementos de ese container no hace falta volver
+a poner el nav si el nombre de la clase no se repite, en el caso de que se repita, añadir otra vez nav*/
 
 .container .decoracion{
     /*código*/
