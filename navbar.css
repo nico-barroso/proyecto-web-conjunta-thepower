@@ -11,6 +11,8 @@
   --color-hover-enlace: #5e62ff;
   --bg-button: #212529;
   --font-letter-links: Nunito, sans-serif;
+  /*Esta es la fuente del titulo que está dentro de la imagen del header*/
+  --font-letter-title-main: "Paytone One", sans-serif;
   --color-text-button: #fefefe;
   --color-span-button: #2f9df4;
 }
