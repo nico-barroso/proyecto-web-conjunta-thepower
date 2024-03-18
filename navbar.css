@@ -1,119 +1,182 @@
-/*RESET*/
+/*REST*/
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 
-body {
-  background-color: #000000;
-}
-
+/*COLORES USADOS*/
 :root {
-  /*color 'Principal' de los 'enlaces (a hre="")' */
-  --color-enlace-original: #ffffff;
-
-  /* Color del enlace en estado hover*/
+  --color-original-enlace: #ffffff;
   --color-hover-enlace: #5e62ff;
-
-  /*Color de fondo 'Principal'  del 'button'*/
   --bg-button: #212529;
-
-  /*Color de fondo al hacer 'hover' sobre el 'button' */
-  --bg-button-hover: #5e62ff;
-
-  /*Color del ícono del button*/
-  --color-icon-button: #18b1eb;
-
-  /*Color de texto del button*/
-  --color-text-button: #fafafa;
+  --font-letter-links: Nunito, sans-serif;
+  --color-text-button: #fefefe;
+  --color-span-button: #2f9df4;
 }
 
+/*FONDO DE ENCABEZADO(header) */
 header {
+  background-image: url(https://media.discordapp.net/attachments/1218608698381828186/1219240712621654058/Untitled-design-1.jpg?ex=660a9566&is=65f82066&hm=f68c7be37c7112a3609f1663251e6835f673a3eb5884fd7536cdac296b607faa&=&format=webp&width=1041&height=586);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+}
+
+/*MENU PRINCIPAL (.navbar) */
+header .navbar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 8%;
+  position: absolute;
+  padding: 2rem 9%;
 }
 
-/*El logo del header*/
-.logo img {
+/*LOGO MENU PRINCIPAL */
+.navbar .nav_logo img {
   max-width: 90px;
   max-height: 100px;
-  cursor: pointer;
 }
 
-.nav {
+/* .nav_items = LINKS + BUTTON*/
+.navbar .nav_items {
   display: flex;
   align-items: center;
   gap: 60px;
-  font-family: Nunito, sans-serif;
 }
-
-.nav ul {
-  display: flex;
-  gap: 40px;
-  margin-bottom: 0;
-  list-style: none;
-}
-
-ul a {
+.navbar .nav_items a {
+  margin: 15px;
+  color: var(--color-original-enlace);
+  position: relative;
   text-decoration: none;
   font-size: 20px;
   font-weight: 400;
-  color: var(--color-enlace-original);
-  transition: 0.4s;
+  font-family: var(--font-letter-links);
+  transition: 0.3s;
 }
-
-a:hover {
+.navbar .nav_items a:hover {
   color: var(--color-hover-enlace);
 }
 
-button {
-  transition: 0.4s;
+/*BOTON DE CONTACTO*/
+.navbar .nav_items .button button {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 15px 34px;
+  gap: 8px;
+  padding: 18px 34px;
   border: none;
+  transition: 0.4s;
   font-size: 20px;
   border-radius: 30px;
   background-color: var(--bg-button);
   color: var(--color-text-button);
   font-weight: 400;
+  font-family: var(--font-letter-links);
   /*Sombra generada por  "https://www.cssmatic.com/es/box-shadow"  */
   -webkit-box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
   -moz-box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
   box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
 }
+.navbar .nav_items .button button:hover {
+  background-color: #5e62ff;
 
-button a {
-  text-decoration: none;
   color: var(--color-text-button);
-}
-button a:hover {
-  color: var(--color-text-button);
-}
-button span {
-  color: var(--color-icon-button);
-}
-button:hover {
-  background-color: var(--bg-button-hover);
   cursor: pointer;
 }
+.navbar .nav_items .button button span {
+  color: var(--color-span-button);
+}
+/* ----------------------------------------*/
 
-@media (max-width: 1095px) {
-  .nav ul {
+/*OCULTANDO EL ICONO MENU*/
+.nav_toggle {
+  display: none;
+}
+/*-----------------------*/
+
+/*MQ*/
+@media (max-width: 1070px) {
+  .nav_items .links {
     display: none;
   }
 }
+@media (max-width: 768px) {
+  .nav_items {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: -webkit-fill-available;
+    transform: translateX(-100%);
+    transition: 0.3s ease all;
+  }
+  .nav_items .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .nav_items a {
+    text-align: center;
+  }
+  .nav_items a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-hover-enlace);
+    transition: all 0.5s;
+  }
+  .nav_items a:hover::before {
+    width: 100% !important;
+  }
 
-@media (max-width: 532px) {
-  .button {
+  /*BOTON DE CONTACTO*/
+  .navbar .nav_items .button button {
+    background-color: var(--color-hover-enlace);
+    border: 1px solid var(--color-hover-enlace);
+    transition: 0.5s;
+    padding: 15px 27px;
+  }
+  .navbar .nav_items .button button:hover {
+    background-color: transparent;
+    border: 1px solid var(--color-hover-enlace);
+    cursor: pointer;
+    color: var(--color-span-button);
+  }
+
+  /*ICON MENU*/
+  .nav_toggle {
+    display: flex !important;
+    flex-direction: column;
+    margin: 15px;
+    cursor: pointer;
+  }
+  .nav_toggle span {
+    width: 30px;
+    height: 4px;
+    background: #5e62ff;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transform-origin: 5px 0px;
+    transition: all 0.2s linear;
+  }
+  .close span {
+    transform: rotate(45deg) translate(0px, 0px);
+  }
+  .close span:nth-child(2) {
     display: none;
   }
-  .logo {
-    margin: auto;
+  .close span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, 1px);
+  }
+  .open {
+    transform: translateX(0) !important;
   }
 }
