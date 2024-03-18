@@ -1,0 +1,119 @@
+/*RESET*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+}
+
+:root {
+  /*color 'Principal' de los 'enlaces (a hre="")' */
+  --color-enlace-original: #ffffff;
+
+  /* Color del enlace en estado hover*/
+  --color-hover-enlace: #5e62ff;
+
+  /*Color de fondo 'Principal'  del 'button'*/
+  --bg-button: #212529;
+
+  /*Color de fondo al hacer 'hover' sobre el 'button' */
+  --bg-button-hover: #5e62ff;
+
+  /*Color del ícono del button*/
+  --color-icon-button: #18b1eb;
+
+  /*Color de texto del button*/
+  --color-text-button: #fafafa;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+}
+
+/*El logo del header*/
+.logo img {
+  max-width: 90px;
+  max-height: 100px;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  font-family: Nunito, sans-serif;
+}
+
+.nav ul {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+ul a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--color-enlace-original);
+  transition: 0.4s;
+}
+
+a:hover {
+  color: var(--color-hover-enlace);
+}
+
+button {
+  transition: 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px 34px;
+  border: none;
+  font-size: 20px;
+  border-radius: 30px;
+  background-color: var(--bg-button);
+  color: var(--color-text-button);
+  font-weight: 400;
+  /*Sombra generada por  "https://www.cssmatic.com/es/box-shadow"  */
+  -webkit-box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
+  -moz-box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
+  box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
+}
+
+button a {
+  text-decoration: none;
+  color: var(--color-text-button);
+}
+button a:hover {
+  color: var(--color-text-button);
+}
+button span {
+  color: var(--color-icon-button);
+}
+button:hover {
+  background-color: var(--bg-button-hover);
+  cursor: pointer;
+}
+
+@media (max-width: 1095px) {
+  .nav ul {
+    display: none;
+  }
+}
+
+@media (max-width: 532px) {
+  .button {
+    display: none;
+  }
+  .logo {
+    margin: auto;
+  }
+}
