@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css">
   <title>NavBar</title>
 </head>
+<!--!Ojo las duplicaciones del body-->
 <body>
   <!--Menú Principal-->
   <body>
@@ -26,6 +27,8 @@
               />
             </a>
       </div>
+      <!--!Esto con un <ul><li></li></ul> queda mejor-->
+      <!--?No hacen falta tantos divs teniendo otras etiquetas que dan más contexto semántico y organizan mejor el código-->
       <div class="nav_items" id="_items">
           <div class="links">
             <a href="#">Home</a>
@@ -34,6 +37,8 @@
             <a href="#">Resources</a>
             <a href="#">My Resume</a>
           </div>
+
+          <!--? Por qué envuelves el botón en un div si luego en el CSS vas a atacar al boton y no a la clase-->
           <div class="button">
             <button>
                 <!--El span, viene a ser el icono de mensaje que hay dentro del boton: "Contact Us"-->
@@ -49,8 +54,10 @@
           <span></span>
   </div>
    </header>
+  <!--! Revisa que los scripts no se repitan, yo personalmente prefiero ponerlos fuera del body-->
+    <script src="index.js"></script>
 </body>
 <!--EL JS DE EL ICONO-->
-</body>
 <script src="./index.js"></script>
+</body>
 </html>
