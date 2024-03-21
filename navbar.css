@@ -10,9 +10,14 @@
   --color-original-enlace: #ffffff;
   --color-hover-enlace: #5e62ff;
   --bg-button: #212529;
+  /*-------------------------------------*/
+             /*Fuentes de texto*/
   --font-letter-links: Nunito, sans-serif;
   /*Esta es la fuente del titulo que está dentro de la imagen del header*/
   --font-letter-title-main: "Paytone One", sans-serif;
+  /*Esta es la fuente del titulo principal de "Top Picks"*/
+  --font-letter-title-section-2: Poppins, sans-serif;
+  /*---------------------------------------------------*/
   --color-text-button: #fefefe;
   --color-span-button: #2f9df4;
 }
