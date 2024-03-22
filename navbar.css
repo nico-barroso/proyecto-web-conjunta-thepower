@@ -13,6 +13,7 @@
   --bg-button: #212529;
   --color-text-button: #fefefe;
   --color-span-button: #2f9df4;
+  --color-p-header: #777777;
   /*-------------------------------------*/
   /*Fuentes de texto*/
   --font-letter-links: Nunito, sans-serif;
@@ -22,13 +23,25 @@
 }
 
 /*FONDO DE ENCABEZADO(header) */
-header {
+/*header {
   background-image: url(https://media.discordapp.net/attachments/1218608698381828186/1219240712621654058/Untitled-design-1.jpg?ex=660a9566&is=65f82066&hm=f68c7be37c7112a3609f1663251e6835f673a3eb5884fd7536cdac296b607faa&=&format=webp&width=1041&height=586);
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 60rem;
   width: 100%;
+}*/
+
+.section-1 {
+  background-image: url(https://media.discordapp.net/attachments/1218608698381828186/1219240712621654058/Untitled-design-1.jpg?ex=660a9566&is=65f82066&hm=f68c7be37c7112a3609f1663251e6835f673a3eb5884fd7536cdac296b607faa&=&format=webp&width=1041&height=586);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /*MENU PRINCIPAL (nav) */
@@ -106,6 +119,53 @@ nav .nav_toggle {
 }
 /*-----------------------*/
 
+/*SECTION TEXTO DEL HEADER*/
+
+.section-1 .text{
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 80%;
+}
+
+.text h1{
+  font-size: 90px;
+  width: 100%;
+  font-family: var(--font-letter-title-main);
+  font-weight: 900;
+  color: var(--color-original-enlace);
+}
+.text p{
+  font-size: 18px;
+  max-width: 50%;
+  color:var(--color-p-header) ;
+  font-family: var(--font-letter-links);
+  font-weight: 600;
+  
+}
+.section-1 .text #first-child{
+  margin-top: -10px;
+  
+}
+
+.section-1 .text #btn{
+  width: 20%;
+  padding: 13px  ;
+  border: none;
+  border-radius: 5px;
+  font-size: 22px;
+  background-color: #343A3F;
+  color: var(--color-original-enlace);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 0 5px  var(--color-text-button);
+}
+
+.text #btn:hover{
+  opacity: 0.8;
+}
 /*MQ*/
 @media (max-width: 1070px) {
   .nav_items .links {
