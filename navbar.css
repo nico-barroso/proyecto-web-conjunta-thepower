@@ -96,6 +96,7 @@ nav .nav_items button:hover {
 /*icon de mensaje del boton*/
 nav .nav_items button span {
   color: var(--color-span-button);
+  display: flex;
 }
 /* ----------------------------------------*/
 
@@ -128,10 +129,10 @@ nav .nav_toggle {
     display: flex;
     flex-direction: column;
   }
-  nav .nav_items a {
+  nav .nav_items .links a {
     text-align: center;
   }
-  nav .nav_items a::before {
+  nav .nav_items .links a::before {
     content: "";
     position: absolute;
     left: 0;
@@ -141,7 +142,7 @@ nav .nav_toggle {
     background: var(--color-hover-enlace);
     transition: all 0.5s;
   }
-  nav .nav_items a:hover::before {
+  nav .nav_items .links a:hover::before {
     width: 100% !important;
   }
 
