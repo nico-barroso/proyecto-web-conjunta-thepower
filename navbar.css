@@ -5,21 +5,20 @@
   margin: 0;
 }
 
-/*COLORES USADOS*/
+/*Colores y Fuentes*/
 :root {
   --color-original-enlace: #ffffff;
   --color-hover-enlace: #5e62ff;
+  /*bg = background-color */
   --bg-button: #212529;
-  /*-------------------------------------*/
-             /*Fuentes de texto*/
-  --font-letter-links: Nunito, sans-serif;
-  /*Esta es la fuente del titulo que está dentro de la imagen del header*/
-  --font-letter-title-main: "Paytone One", sans-serif;
-  /*Esta es la fuente del titulo principal de "Top Picks"*/
-  --font-letter-title-section-2: Poppins, sans-serif;
-  /*---------------------------------------------------*/
   --color-text-button: #fefefe;
   --color-span-button: #2f9df4;
+  /*-------------------------------------*/
+  /*Fuentes de texto*/
+  --font-letter-links: Nunito, sans-serif;
+  --font-letter-title-main: "Paytone One", sans-serif;
+  --font-letter-title-section-2: Poppins, sans-serif;
+  /*---------------------------------------------------*/
 }
 
 /*FONDO DE ENCABEZADO(header) */
@@ -32,8 +31,8 @@ header {
   width: 100%;
 }
 
-/*MENU PRINCIPAL (.navbar) */
-header .navbar {
+/*MENU PRINCIPAL (nav) */
+header nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -43,18 +42,18 @@ header .navbar {
 }
 
 /*LOGO MENU PRINCIPAL */
-.navbar .nav_logo img {
+nav img {
   max-width: 90px;
   max-height: 100px;
 }
 
 /* .nav_items = LINKS + BUTTON*/
-.navbar .nav_items {
+nav .nav_items {
   display: flex;
   align-items: center;
   gap: 60px;
 }
-.navbar .nav_items a {
+nav .nav_items a {
   margin: 15px;
   color: var(--color-original-enlace);
   position: relative;
@@ -64,12 +63,12 @@ header .navbar {
   font-family: var(--font-letter-links);
   transition: 0.3s;
 }
-.navbar .nav_items a:hover {
+nav .nav_items a:hover {
   color: var(--color-hover-enlace);
 }
 
 /*BOTON DE CONTACTO*/
-.navbar .nav_items .button button {
+nav .nav_items button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -88,19 +87,20 @@ header .navbar {
   -moz-box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
   box-shadow: 1px 25px 37px -22px rgba(94, 98, 255, 1);
 }
-.navbar .nav_items .button button:hover {
-  background-color: #5e62ff;
+nav .nav_items button:hover {
+  background-color: var(--color-hover-enlace);
 
   color: var(--color-text-button);
   cursor: pointer;
 }
-.navbar .nav_items .button button span {
+/*icon de mensaje del boton*/
+nav .nav_items button span {
   color: var(--color-span-button);
 }
 /* ----------------------------------------*/
 
 /*OCULTANDO EL ICONO MENU*/
-.nav_toggle {
+nav .nav_toggle {
   display: none;
 }
 /*-----------------------*/
@@ -112,7 +112,7 @@ header .navbar {
   }
 }
 @media (max-width: 768px) {
-  .nav_items {
+  nav .nav_items {
     position: absolute;
     top: 150px;
     left: 0;
@@ -120,17 +120,18 @@ header .navbar {
     flex-direction: column;
     width: 100%;
     height: -webkit-fill-available;
+    /*height: 100vh;*/
     transform: translateX(-100%);
     transition: 0.3s ease all;
   }
-  .nav_items .links {
+  nav .nav_items .links {
     display: flex;
     flex-direction: column;
   }
-  .nav_items a {
+  nav .nav_items a {
     text-align: center;
   }
-  .nav_items a::before {
+  nav .nav_items a::before {
     content: "";
     position: absolute;
     left: 0;
@@ -140,18 +141,18 @@ header .navbar {
     background: var(--color-hover-enlace);
     transition: all 0.5s;
   }
-  .nav_items a:hover::before {
+  nav .nav_items a:hover::before {
     width: 100% !important;
   }
 
   /*BOTON DE CONTACTO*/
-  .navbar .nav_items .button button {
+  nav .nav_items button {
     background-color: var(--color-hover-enlace);
     border: 1px solid var(--color-hover-enlace);
     transition: 0.5s;
     padding: 15px 27px;
   }
-  .navbar .nav_items .button button:hover {
+  nav .nav_items button:hover {
     background-color: transparent;
     border: 1px solid var(--color-hover-enlace);
     cursor: pointer;
@@ -159,13 +160,13 @@ header .navbar {
   }
 
   /*ICON MENU*/
-  .nav_toggle {
+  nav .nav_toggle {
     display: flex !important;
     flex-direction: column;
     margin: 15px;
     cursor: pointer;
   }
-  .nav_toggle span {
+  nav .nav_toggle span {
     width: 30px;
     height: 4px;
     background: #5e62ff;
