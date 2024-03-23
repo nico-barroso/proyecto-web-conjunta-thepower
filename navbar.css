@@ -42,9 +42,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  
 }
 
 /*MENU PRINCIPAL (nav) */
+header{
+  width: 100%;
+}
 header nav {
   width: 100%;
   display: flex;
@@ -52,6 +57,7 @@ header nav {
   align-items: center;
   position: absolute;
   padding: 2rem 9%;
+  
 }
 
 /*LOGO MENU PRINCIPAL */
@@ -121,24 +127,29 @@ nav .nav_toggle {
 
 /*SECTION TEXTO DEL HEADER*/
 
+
+.section-1{
+  padding: 0 9rem;
+}
 .section-1 .text{
   padding: 5rem;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  width: 80%;
+  width: 100%;
+  min-width: 1000px;
+  
 }
 
 .text h1{
   font-size: 90px;
-  width: 100%;
   font-family: var(--font-letter-title-main);
   font-weight: 900;
   color: var(--color-original-enlace);
 }
-.text p{
+.text p, #first-child{
   font-size: 18px;
-  max-width: 50%;
+  max-width: 60%;
   color:var(--color-p-header) ;
   font-family: var(--font-letter-links);
   font-weight: 600;
@@ -149,8 +160,8 @@ nav .nav_toggle {
   
 }
 
-.section-1 .text #btn{
-  width: 20%;
+/*BOTON 'explore more -> ' */
+.section-1  #btn{
   padding: 13px  ;
   border: none;
   border-radius: 5px;
@@ -161,6 +172,9 @@ nav .nav_toggle {
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 0 5px  var(--color-text-button);
+  
+  
+
 }
 
 .text #btn:hover{
@@ -170,6 +184,16 @@ nav .nav_toggle {
 @media (max-width: 1070px) {
   .nav_items .links {
     display: none;
+  }
+}
+
+@media (max-width:1025px){
+  .section-1 .text{
+    padding: 0;
+    margin: 5rem auto;
+  }
+  .section-1 .text h1{
+    font-size: 80px;
   }
 }
 @media (max-width: 768px) {
@@ -249,3 +273,8 @@ nav .nav_toggle {
     transform: translateX(0) !important;
   }
 }
+
+
+/*MQ Para .section Text */
+
+
