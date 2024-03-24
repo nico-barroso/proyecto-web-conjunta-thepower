@@ -314,7 +314,9 @@ nav .nav_toggle {
 }
 
 @media (max-width:434px){
-  
+  .section-1 .text h1{
+    font-size: 35px;
+  }
   .section-1 .text p , #first-child{
     padding: 0 4rem;
   }
@@ -326,7 +328,7 @@ nav .nav_toggle {
   }
   
   .section-1 .text h1{
-    font-size: 18px;
+    font-size: 26px;
     
   }
   .section-1 #btn{
@@ -334,6 +336,7 @@ nav .nav_toggle {
     padding: 10px;
   }
   .section-1 .text p, #first-child{
+    padding: 0 1rem;
     font-size: 14px;
     max-width: 60%;
     margin: auto;
