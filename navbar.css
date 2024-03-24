@@ -85,7 +85,7 @@ nav .nav_items a:hover {
   color: var(--color-hover-enlace);
 }
 
-/*BOTON DE CONTACTO*/
+/*BOTON DE CONTACTO DE LA NAV*/
 nav .nav_items button {
   display: flex;
   align-items: center;
@@ -127,7 +127,7 @@ nav .nav_toggle {
 /*SECTION TEXTO*/
 
 .section-1 .text {
-  padding: 0 3rem;
+  padding: 0 7.5rem;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -172,6 +172,7 @@ nav .nav_toggle {
 .text #btn:hover {
   opacity: 0.8;
 }
+
 /*MQ*/
 @media (max-width: 1070px) {
   .nav_items .links {
@@ -180,26 +181,30 @@ nav .nav_toggle {
 }
 
 @media (max-width: 1025px) {
+  .section-1 .text{
+    padding: 0;
+  }
   .section-1 .text h1, p, #first-child{
     margin: auto;
   }
   .section-1 .text h1 {
     font-size: 70px;
+    /*background-color: rebeccapurple;*/
   }
 
 }
 
 @media (max-width: 900px) {
+  
   .text h1 {
     text-align:center;
     font-size: 35px;
-    padding: 0;
     width: 100%;
-    
   }
   .text p, #first-child {
     text-align: center;
     max-width: 100%;
+    padding: 0 3rem;
   }
   .section-1 #btn{
     font-size: 14px;
@@ -207,10 +212,11 @@ nav .nav_toggle {
 }
 
 @media (max-width:818px){
+  .section-1 .text p, #first-child{
+    padding: 0 3rem;
+  }
   .text h1{
-    font-size: 12pt;
-    max-width: 100%;
-    
+    font-size: 24px;
   }
 }
 
@@ -294,7 +300,9 @@ nav .nav_toggle {
   }
 
   /*SECTION TEXT*/
-
+  .section-1 .text{
+    padding: 0 3rem;
+  }
   .section-1 .text h1 {
     font-size: 32px;
   }
@@ -306,13 +314,16 @@ nav .nav_toggle {
 }
 
 @media (max-width:434px){
+  
   .section-1 .text p , #first-child{
     padding: 0 4rem;
   }
 }
 
 @media (max-width:360px){
-
+  .section-1 .text{
+    padding: 0 0;
+  }
   
   .section-1 .text h1{
     font-size: 18px;
