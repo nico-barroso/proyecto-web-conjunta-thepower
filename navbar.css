@@ -13,7 +13,7 @@
   --bg-button: #212529;
   --color-text-button: #fefefe;
   --color-span-button: #2f9df4;
-  --color-p-header: #777777;
+  --color-p-header: #828080;
   /*-------------------------------------*/
   /*Fuentes de texto*/
   --font-letter-links: Nunito, sans-serif;
@@ -150,6 +150,7 @@ nav .nav_toggle {
   color: var(--color-p-header);
   font-family: var(--font-letter-links);
   font-weight: 600;
+  line-height: 30px;
 }
 .section-1 .text #first-child {
   margin-top: -10px;
