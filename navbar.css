@@ -40,9 +40,9 @@
   height: 60rem;
   width: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
   flex-direction: column;
+  align-items: flex-start;
   gap: 20px;
 }
 
@@ -91,7 +91,7 @@ nav .nav_items button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 18px 34px;
+  padding: 17px 30px;
   border: none;
   transition: 0.4s;
   font-size: 20px;
@@ -133,8 +133,6 @@ nav .nav_toggle {
   gap: 30px;
   width: 100%;
   min-width: 600px;
-  
-
 }
 
 .text h1 {
@@ -156,25 +154,42 @@ nav .nav_toggle {
   margin-top: -10px;
 }
 
-/*BOTON 'explore more -> ' */
+/*BOTON del section-1 'explore more -> ' */
 .section-1 #btn {
   padding: 13px;
   border: none;
   border-radius: 5px;
-  font-size: 22px;
+  font-size: 20px;
   background-color: #343a3f;
   color: var(--color-original-enlace);
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 0 5px var(--color-text-button);
-  margin-top: 40px;
+  margin-top: 35px;
+  margin-left: 120px;
 }
 .text #btn:hover {
   opacity: 0.8;
 }
 
+/* * Los iconos de las redes sociales */
+.icons {
+  width: 60%;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-left: 120px;
+  position: relative;
+  top: 150px;
+}
+.icons li a {
+  font-size: 25px;
+  color: var(--color-original-enlace);
+}
+
 /*MQ*/
+
 @media (max-width: 1070px) {
   .nav_items .links {
     display: none;
@@ -182,41 +197,60 @@ nav .nav_toggle {
 }
 
 @media (max-width: 1025px) {
-  .section-1 .text{
+  .section-1 .text {
+    margin-top: 6rem;
     padding: 0;
   }
-  .section-1 .text h1, p, #first-child{
+  .section-1 .text h1,
+  p,
+  #first-child {
     margin: auto;
   }
+
   .section-1 .text h1 {
     font-size: 70px;
     /*background-color: rebeccapurple;*/
   }
+  .section-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
+  .section-1 #btn {
+    margin: 40px 0;
+  }
+  .icons {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 120px;
+  }
 }
 
 @media (max-width: 900px) {
-  
   .text h1 {
-    text-align:center;
+    text-align: center;
     font-size: 35px;
     width: 100%;
   }
-  .text p, #first-child {
+  .text p,
+  #first-child {
     text-align: center;
     max-width: 100%;
     padding: 0 3rem;
   }
-  .section-1 #btn{
+  .section-1 #btn {
     font-size: 14px;
   }
 }
 
-@media (max-width:818px){
-  .section-1 .text p, #first-child{
-    padding: 0 3rem;
+@media (max-width: 821px) {
+  .section-1 .text{
+    padding: 0;
   }
-  .text h1{
+  .text h1 {
     font-size: 24px;
   }
 }
@@ -301,47 +335,46 @@ nav .nav_toggle {
   }
 
   /*SECTION TEXT*/
-  .section-1 .text{
+  .section-1 .text {
     padding: 0 3rem;
   }
   .section-1 .text h1 {
     font-size: 32px;
   }
 
-  .section-1 .text p , #first-child{
+  .section-1 .text p,
+  #first-child {
     font-size: 19px;
-    
   }
 }
 
-@media (max-width:434px){
-  .section-1 .text h1{
+@media (max-width: 434px) {
+  .section-1 .text h1 {
     font-size: 35px;
   }
-  .section-1 .text p , #first-child{
+  .section-1 .text p,
+  #first-child {
     padding: 0 4rem;
   }
 }
 
-@media (max-width:360px){
-  .section-1 .text{
+@media (max-width: 360px) {
+  .section-1 .text {
     padding: 0 0;
   }
-  
-  .section-1 .text h1{
+
+  .section-1 .text h1 {
     font-size: 26px;
-    
   }
-  .section-1 #btn{
+  .section-1 #btn {
     font-size: 10px;
     padding: 10px;
   }
-  .section-1 .text p, #first-child{
-    padding: 0 1rem;
+  .section-1 .text p,
+  #first-child {
+    padding: 0 2rem;
     font-size: 14px;
     max-width: 60%;
     margin: auto;
-    
   }
 }
-
